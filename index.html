@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Thread Between Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500..800&family=Karla:ght@400..600&family=Noto+Sans+Telugu:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stage">
+
+        <button class="sound-toggle" id="soundToggle" aria-label="Toggle Unlock Sound">
+            🔊
+        </button>
+
+        <div class="thread-rule">
+            <svg viewBox="0 0 600 40" preserveAspectRatio="none">
+                <path
+                d="M0,20 C100, 0 200, 40 300, 20 C400, 0 500, 40 600, 20"
+                fill="none" stroke="#C9A227" stroke-width="2"
+                stroke-dasharray="1 8" stroke-linecap="round"
+                />
+            </svg>
+            <div class="thread-reveal-mask"></div>
+        </div>
+
+        <h1>A Thread Between Us</h1>
+        <p class="subtitle">Tap Your name to see what's tied to it</p>
+
+        <!-- shared intro note -->
+        <div class="intro-panerl" id="introPanel">
+            <div class="intro-text" id="introText"></div>
+            <div class="intro-lock" id="introLock">
+                <i class="intro-lock-icon">🔓</i>
+                <div class="intro-lock-label">Opens in...</div>
+                <div class="intro-lock-timer" id="introTimer">--:--:--</div>
+            </div>
+        </div>
+
+        <!-- name selection -->
+        <div class="tags-wrap" id="selectScreen">
+            <ul class="tags" id="tagList"></ul>
+        </div>
+
+        <!-- pin gate -->
+        <div class="panel panel--dark" id="pinPanel">
+            <div class="for-name" id="pinName"></div>
+            <div class="pin-label">Enter your pin to continue</div>
+            <input type="password" inputmode="numeric" maxlength=4 id="pinInput" class="pin-input" autocomplete="off">
+            <button class="pin-submit" id="pinSubmit">Unlock</button>
+            <div class="pin-error" id="pinError"></div>
+            <div class="back-link" id="backFromPin">👈 choose another name</div>
+        </div>
+        
+        <!-- countdown/locked -->
+        <div class="panel panel--dark" id="lockedPanel">
+            <div class="knot-row">
+                <div class="knot"></div><div class="knot"></div><div class="knot"></div>
+            </div>
+            <div class="for-name" id="lockedName"></div>
+            <div class="countdown-label">This one unties in...</div>
+            <div class="countdown-timer" id="timer">--:--:--</div>
+            <div class="back-link" id="backFromLocked">👈 choose another name</div>
+        </div>
+
+        <!-- message reveal -->
+        <div class="message-panel" id="messagePanel">
+            <p class="message-occasion">Happy Rakhi</p>
+            <h2 class="message-to" id="messageTo"></h2>
+            <div class="message-body" id="messageBody"></div>
+            <div class="message-sign" id="messageSign"></div>
+            <button class="listen-btn" id="listenBtn">🔊 Read this aloud</button>
+            <div class="message-back" id="backFromMessage">👈 back to all names</div>
+        </div>
+
+        <footer class="foot">Made with a little courage just for you</footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
