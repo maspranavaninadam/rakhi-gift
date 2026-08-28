@@ -104,6 +104,11 @@ document.addEventListener("DOMContentLoaded", () => {
         hide(messagePanel);
 
         show(screen);
+
+        document.body.classList.toggle(
+            "message-active",
+            screen === messagePanel
+        );
     }
 
 
@@ -330,6 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 showLocked();
             }
+            window.scrollTo(0, 0);
 
             return;
         }

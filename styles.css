@@ -727,3 +727,80 @@ h1 {
         border-radius: 14px;
     }
 }
+
+
+/* Full-screen message experience */
+body.message-active .stage {
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    padding: 0;
+}
+
+body.message-active .sound-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+body.message-active .thread-rule,
+body.message-active h1,
+body.message-active .subtitle,
+body.message-active .intro-panel,
+body.message-active #selectScreen,
+body.message-active #pinPanel,
+body.message-active #lockedPanel,
+body.message-active .foot {
+    display: none !important;
+}
+
+
+body.message-active #messagePanel {
+    display: block !important;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    padding: 90px 24px 50px;
+    text-align: center;
+}
+
+/* Keep the actual message nicely centered */
+body.message-active #messagePanel .message-occasion,
+body.message-active #messagePanel .message-to,
+body.message-active #messagePanel .message-body,
+body.message-active #messagePanel .message-sign,
+body.message-active #messagePanel .listen-btn,
+body.message-active #messagePanel .message-back {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Message content width */
+body.message-active #messagePanel .message-body {
+    width: min(100%, 650px);
+}
+
+/* Signature */
+body.message-active #messagePanel .message-sign {
+    margin-top: 28px;
+}
+
+/* Read aloud button */
+body.message-active #messagePanel .listen-btn {
+    display: block;
+    margin-top: 28px;
+}
+
+/* Back button */
+body.message-active #messagePanel .message-back {
+    margin-top: 20px;
+}
+
+
+body.message-active #messagePanel .message-body {
+    max-width: 650px;
+}
