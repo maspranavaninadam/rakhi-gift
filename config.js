@@ -19,7 +19,7 @@ const UNLOCK_TIME = "2026-08-29T12:00:00"
 const MEMBERS = [
     {
         name: "Navya",
-        pin: "2001",
+        pin: "4827",
         lang: "en-IN",
 
         body: [
@@ -64,7 +64,7 @@ const MEMBERS = [
     },
     {
         name: "Lasya",
-        pin: "2005",
+        pin: "9163",
         lang: "en-IN",
 
         body: [
@@ -112,7 +112,7 @@ But I will always be there for you.`
 
     {
         name: "Amma",
-        pin: "1975",
+        pin: "2058",
         lang: "en-IN",
 
         body: [
@@ -143,7 +143,7 @@ But I will always be there for you.`
 
     {
         name: "Nannagaru",
-        pin: "1971",
+        pin: "7314",
         lang: "en-IN",
 
         body: [
@@ -171,7 +171,7 @@ But I will always be there for you.`
 
     {
         name: "Nanamma",
-        pin: "1938",
+        pin: "6592",
         lang: "en-IN",
 
         body: [
